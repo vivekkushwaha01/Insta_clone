@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login . Instagram</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* border: 2px solid green; */
+            background-color: #fafafa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .largebox {
+            /* border: 1px solid red; */
+            border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+            padding: 20px;
+            /* margin: 40px 80px; */
+            margin-top: 40px;
+            background-color: white;
+            width: 350px;
+        }
+
+        .small_box {
+            /* border: 1px solid red; */
+            border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+            padding: 20px;
+            /* margin: 40px 80px; */
+            margin: 10px 0;
+            background-color: white;
+            width: 350px;
+        }
+
+
+        .instagram_brand {
+            /* border: 1px solid blue; */
+            text-align: center;
+            padding: 10px;
+            font-size: large;
+        }
+
+        .form_box {
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            /* border: 1px solid blue; */
+            /* width: 100%; */
+            margin-top: 10px;
+        }
+
+        .input_box {
+            margin: 10px 0px;
+        }
+
+        .input {
+            /* border: 1px solid hotpink; */
+            border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+            background-color: #fafafa;
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        #log_in {
+            /* border: 1px solid hotpink; */
+            width: 250px;
+            padding: 6px;
+            border-radius: 4px;
+            color: white;
+            background-color: skyblue;
+            border: none;
+        }
+
+        .log_in_btn {
+            margin-top: 20px;
+        }
+
+        .horizontal_line {
+            /* border: 1px solid hotpink; */
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .or {
+            color: gray;
+            font-size: 14px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .line {
+            width: 100%;
+        }
+
+        .facebook_logo {
+            /* border: 1px solid orange; */
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            margin-top: 15px;
+        }
+
+        .facebook_logo a {
+            text-decoration: none;
+            color: grey;
+            font-weight: bold;
+        }
+
+        .font_awesome {
+            /* border: 1px solid red; */
+            padding: 0 8px 0 0;
+        }
+
+        .font_awesome_link a {
+            color: hsl(240, 33%, 29%);
+        }
+
+        .fa-facebook-square {
+            color: hsl(240, 33%, 29%);
+
+        }
+
+        .forgot_password {
+            /* border: 1px solid black; */
+            margin: 10px 0;
+        }
+
+        .forgot_password_link {
+            /* border: 1px solid red; */
+            text-align: center;
+            font-size: 14px;
+            /* margin:10px 0; */
+        }
+
+        .forgot_password_link a {
+            color: grey;
+            text-decoration: none;
+        }
+
+        .small_box {
+            text-align: center;
+        }
+
+        .small_box span a {
+            color: dodgerblue;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .last_box {
+            /* border: 1px solid red; */
+            padding: 20px;
+            margin: 20px 0 0 0;
+            width: 350px;
+        }
+
+        .text {
+            /* border:1px solid red; */
+            text-align: center;
+        }
+
+        .play_store {
+            /* border:1px solid blue; */
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .image {
+            /* border:1px solid skyblue; */
+            margin: 5px;
+        }
+
+        .image img {
+            width: 130px;
+            display: block;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .footer {
+            /* border: 1px solid hotpink; */
+            padding:30px 0;
+            margin:5px 0;
+        }
+
+        .upper_footer {
+            /* border: 1px solid red; */
+            display: flex;
+            /* by default flex-direction is row..
+            i wrote just to keep memorise */
+            flex-direction: row;
+
+        }
+
+        .footer_links {
+            /* border: 1px solid blue; */
+            padding: 5px;
+        }
+
+        .footer_links a {
+            text-decoration: none;
+            font-size: 13px;
+            color: grey;
+        }
+
+        #lower_footer {
+            /* border: 2px solid dodgerblue; */
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+        }
+
+        #lower_footer p,
+        #lower_footer a {
+            /* border: 1px solid red; */
+            padding-left: 10px;
+            text-decoration: none;
+            font-size: 13px;
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="largebox">
+        <div class="instagram_brand">
+            <h1>instagram</h1>
+        </div>
+        <div class="form_box">
+            <form>
+                <div class="input_box">
+                    <input type=text id="username" class="input" placeholder="Phone number, username, or email">
+                </div>
+                <div class="input_box">
+                    <input type="password" id="password" class="input" placeholder="Password">
+                </div>
+                <div class="log_in_btn">
+                    <input type="submit" value="Log In" id="log_in">
+                </div>
+                <div class="horizontal_line">
+                    <div class="line">
+                        <hr>
+                    </div>
+                    <div class="or">&nbsp;&nbsp;OR&nbsp;&nbsp;</div>
+                    <div class="line">
+                        <hr>
+                    </div>
+                </div>
+                <div class="facebook_logo">
+                    <a href="https://www.facebook.com">
+                        <div class="font_awesome">
+                            <i class="fab fa-facebook-square"></i>
+                        </div>
+                        <div class="font_awesome_link">
+                            <a href="https://www.facebook.com">Log in with Facebook</a>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="forgot_password">
+                    <div class="forgot_password_link">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+
+    <div class="small_box">
+        Don't have an account? <span><a href="instagram_signup.html">Sign up</a></span>
+    </div>
+
+    <div class="last_box">
+        <div class="text">
+            <p>Get the app.</p>
+        </div>
+        <div class="play_store">
+            <div class="image">
+                <a href="https://www.apple.com/in/app-store/"> <img src="images/off1.png"></a>
+            </div>
+            <div class="image">
+                <a href="https://play.google.com/store"> <img src="images/off2.png"></a>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="upper_footer">
+            <div id="about" class="footer_links">
+                <a href="#">About</a>
+            </div>
+            <div id="blog" class="footer_links">
+                <a href="#">Blog</a>
+            </div>
+            <div id="jobs" class="footer_links">
+                <a href="#">Jobs</a>
+            </div>
+            <div id="help" class="footer_links">
+                <a href="#">Help</a>
+            </div>
+            <div id="api" class="footer_links">
+                <a href="#">API</a>
+            </div>
+            <div id="privacy" class="footer_links">
+                <a href="#">Privacy</a>
+            </div>
+            <div id="terms" class="footer_links">
+                <a href="#">Terms</a>
+            </div>
+            <div id="top_accounts" class="footer_links">
+                <a href="#">Top Accounts</a>
+            </div>
+            <div id="hashtags" class="footer_links">
+                <a href="#">Hashtags</a>
+            </div>
+            <div id="locations" class="footer_links">
+                <a href="#">Locations</a>
+            </div>
+
+        </div>
+
+        <div id="lower_footer" class="footer_links">
+            <a href="#">English</a>
+            <p>&copy; 2021 Instagram from Facebook</p>
+        </div>
+    </div>
+</body>
+
+</html>
